@@ -19,6 +19,46 @@
   \____/\__,_|___/\__|_|\___|  \___/ \__,_|\___/|_| .__/|_| |_|\___/ 
                                                   | |                
                                                   |_|                
+                                 ____                                         
+                              .-"    `-.      ,                               
+                            .'          '.   /j\                              
+                           /              \,/:/#\                /\           
+                          ;              ,//' '/#\              //#\          
+                          |             /' :   '/#\            /  /#\         
+                          :         ,  /' /'    '/#\__..--""""/    /#\__      
+                           \       /'\'-._:__    '/#\        ;      /#, """---
+                            `-.   / ;#\']" ; """--./#J       ':____...!       
+                               `-/   /#\  J  [;[;[;Y]         |      ;        
+""""""---....             __.--"/    '/#\ ;   " "  |     !    |   #! |        
+             ""--.. _.--""     /      ,/#\'-..____.;_,   |    |   '  |        
+                   "-.        :_....___,/#} "####" | '_.-",   | #['  |        
+                      '-._      |[;[;[;[;|         |.;'  /;\  |      |        
+                      ,   `-.   |        :     _   .;'    /;\ |   #" |        
+                      !      `._:      _  ;   ##' .;'      /;\|  _,  |        
+                     .#\"""---..._    ';, |      .;{___     /;\  ]#' |__....--
+          .--.      ;'/#\         \    ]! |       "| , """--./_J    /         
+         /  '%;    /  '/#\         \   !' :        |!# #! #! #|    :`.__      
+        i__..'%] _:_   ;##J         \      :"#...._!   '  "  "|__  |    `--.._
+         | .--""" !|""""  |"""----...J     | '##"" `-._       |  """---.._    
+     ____: |      #|      |         #|     |          "]      ;   ___...-"T,  
+    /   :  :      !|      |   _______!_    |           |__..--;"""     ,;MM;  
+   :____| :    .-.#|      |  /\      /#\   |          /'               ''MM;  
+    |""": |   /   \|   .----+  ;      /#\  :___..--"";                  ,'MM; 
+   _Y--:  |  ;     ;.-'      ;  \______/#: /         ;                  ''MM; 
+  /    |  | ;_______;     ____!  |"##"""MM!         ;                    ,'MM;
+ !_____|  |  |"#"#"|____.'""##"  |       :         ;                     ''MM  
+  | """"--!._|     |##""         !       !         :____.....-------"""""" |'
+  |          :     |______                        ___!_ "#""#""#"""#"""#"""|  
+__|          ;     |MM"MM"""""---..._______...--""MM"MM]                   |   
+  "\-.      :      |#                                  :                   |  
+    /#'.    |      /##,                                !                   |  
+   .',/'\   |       #:#,                                ;       .==.       |  
+  /"\'#"\',.|       ##;#,                               !     ,'||||',     |  
+        /;/`:       ######,          ____             _ :     M||||||M     |  
+       ###          /;"\.__"-._   """                   |===..M!!!!!!M_____|  
+                           `--..`--.._____             _!_                    
+                                          `--...____,="_.'`-.____        
+
 ```
 
 A text-based Choose Your Own Adventure game by Thomas Asmussen
@@ -35,7 +75,7 @@ your aunt, ultimately leading to her unfortunate death.
 
 With your aunt deceased, it's only a matter of time before Montoni decides to
 get rid of you, too. That is why tonight, you and your faithful servant,
-Annette, will attempt to make your escape from the Castle of Udolpho, or suffer
-the wrath of Montoni.
+Annette, will brave the wrath of Montoni and the schemes of your kidnapping
+suitor Count Morano to attempt to make your escape from the Castle of Udolpho.
 
 Based on the novel *The Mysteries of Udolpho* by Ann Radcliffe.
