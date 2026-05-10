@@ -73,11 +73,8 @@ void follow() {
     );
 
     int choice = get_choice(2);
-    if(choice == 1) {
-        trust0();
-    } else {
-        distrust();
-    }
+    if(choice == 1) trust0(); 
+    else distrust();
 }
 
 void get_docs() {
@@ -95,7 +92,40 @@ void get_docs() {
         "\n"
         "Now you've lead Montoni straight to the very documents he needed! Oops...\n"
         "\n"
-        "You have failed to escape from the Castle of Udolpho.\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
+    );
+
+    game_over();
+}
+
+void to_top() {
+    clear_screen();
+    printf(
+        "You continue running up the stairs until you get to the top of the turret.\n"
+        "You close the door behind you as you continue to hear heavy footsteps approach.\n"
+        "You hear a click at the door and immediately realize, the door locks from the\n"
+        "outside, and Montoni's men have locked you in here!\n"
+        "\n"
+        "Unfortunately for you, Montoni is content to let you face the same fate as\n"
+        "your late aunt...\n"
+        "\n"
+        "You have failed to escape from the Caste of Udolpho.\n\n"
+    );
+
+    game_over();
+}
+
+void clothes() {
+    clear_screen();
+    printf(
+        "You go to the pile of clothes and tie them together into a long rope.\n"
+        "You tie one end to an old sconce on the wall and throw the rest out the window.\n"
+        "Gripping tightly onto the rope, you slowly rappel down the side of the turret\n"
+        "and land in the outside forest surrounding the castle.\n"
+        "\n"
+        "You're out of Udolpho, but good luck making it through the wilderness alone...\n"
+        "\n"
+        "Congratulations! You have successfully escaped from the Castle of Udolpho!\n\n"
     );
 
     game_over();
@@ -119,14 +149,11 @@ void to_stairs() {
     );
 
     int choice = get_choice(2);
-    if(choice == 1) {
-        trust1();
-    } else {
-        distrust();
-    }
+    if(choice == 1) trust1();
+    else distrust();
 }
 
-void down_cor() {
+void down_cor0() {
     clear_screen();
     printf(
         "You abandon Du Pont to his battle with Verezzi and barrel down the corridors\n"
@@ -138,7 +165,7 @@ void down_cor() {
         "Unable to navigate the confusing hidden passageways of Udolpho in the dark,\n"
         "you prepare to live out the rest of your short life in the walls of Udolpho.\n"
         "\n"
-        "You have failed to escape from the Castle of Udolpho.\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
     );
 
     game_over();
@@ -157,16 +184,118 @@ void stop_fight() {
     );
 
     int choice = get_choice(2);
-    if(choice == 1) {
-        follow();
-    } else {
-        get_docs();
-    }
+    if(choice == 1) follow();
+    else get_docs();
+}
+
+void to_room() {
+    clear_screen();
+    printf(
+        "Your Room\n"
+        "You scramble back into your room and lock the door behind you.\n"
+        "You hear the footsteps and shouts of Montoni's men as they try and enter\n"
+        "your room, but the door holds and they can't get in.\n"
+        "The sound of Montoni's men scares of Ludovico and the prisoner from meeting\n"
+        "with you.\n"
+        "\n"
+        "You're safe inside your room the rest of the night, but you can't help but\n"
+        "think that tonight might have been your only chance to escape.\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
+    );
+
+    game_over();
+}
+
+void down_cor1() {
+    clear_screen();
+    printf(
+        "You barrel down the corridors of Udolpho, terrified of encountering any of\n"
+        "Montoni's dangerous accomplices.\n"
+        "In your frensy and exhaustion, you bump into a tapesty and fall straight\n"
+        "through it into a hidden passageway.\n"
+        "The passageway entrance closes behind you and seals you in complete darkness.\n"
+        "\n"
+        "Unable to navigate the confusing hidden passageways of Udolpho in the dark,\n"
+        "you prepare to live out the rest of your short life in the walls of Udolpho.\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
+    );
+
+    game_over();
+}
+
+void up_stairs() {
+    clear_screen();
+    printf(
+        "North Turret\n"
+        "Before Montoni's men can catch you, you dash up the stairs as high as you can\n"
+        "go until you find yourself in the North Turret of the castle.\n"
+        "There is a pile of old clothes on the landing by an open window and the\n"
+        "staircase continues up into the darkness.\n"
+        "You hear the sound of heavy footsteps behind you...\n"
+        "\n"
+        "1. Keep running, climb the stairs to get away from Montoni's men\n"
+        "2. Use the pile of clothes to help escape.\n\n"
+    );
+
+    int choice = get_choice(2);
+    if(choice == 1) to_top();
+    else clothes();
+}
+
+void distrust_du() {
+    clear_screen();
+    printf(
+        "Connecting Corridor"
+        "You decide you can't be trusting strange men, even if he has a good countenance.\n"
+        "You try and sneak back to your room, but get caught sneaking around by some of\n"
+        "Montoni's guests.\n"
+        "They drag you into the party and you are forced to endure their cruel laughter\n"
+        "until the sun comes up in the morning.\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
+    );
+
+    game_over();
+}
+
+void trust_du() {
+    clear_screen();
+    printf(
+        "You decidde to trust the stranger Du Pont and let yourself into his cell.\n"
+        "He reveals a secret passageway in his cell and together you venture into it.\n"
+        "After much navigating through many narrow, dark passages, you suddenly find\n"
+        "yourself outside of the castle in the wilderness.\n"
+        "\n"
+        "You've made it out of Montoni's grasp, but now you're stuck with this stranger\n"
+        "and feel bad for leaving Annette behind...\n"
+        "\n"
+        "Congratulations! You have successfully escaped from the Castle of Udolpho!\n\n"
+    );
+
+    game_over();
 }
 
 // lvl 2 depth
 void no_wait() {
     clear_screen();
+    printf(
+        "Connecting Corridor\n"
+        "You slam open the door and rush out into the corridor, expecting to see\n"
+        "Valancourt, but the corridor is empty.\n"
+        "The sound you made alerts Montoni's party, and you can hear the shouts of men\n"
+        "preparing to go after you.\n"
+        "\n"
+        "1. Rush back into your room and lock the door.\n"
+        "2. You have to get out of here! Run the other down the corridor.\n"
+        "3. You must bring them away from Annette! Run up the staircase.\n\n"
+    );
+
+    int choice = get_choice(3);
+    if(choice == 1) to_room();
+    else if (choice == 2) down_cor1();
+    else up_stairs();
 }
 
 void wait_door() {
@@ -186,13 +315,45 @@ void wait_door() {
     );
 
     int choice = get_choice(3);
-    if(choice == 1) {
-        to_stairs();
-    } else if(choice == 2) {
-        down_cor();
-    } else {
-        stop_fight();
-    }
+    if(choice == 1) to_stairs();
+    else if(choice == 2) down_cor0();
+    else stop_fight();
+}
+
+void distract() {
+    clear_screen();
+    printf(
+        "You pick up a small and throw it down a different path, prompting the guard to\n"
+        "follow it in search of the source of the sound.\n"
+        "While he's distracted, you go up to the only prisoner you see... and are\n"
+        "surprised to meet not Valancourt, but a Frenchman named Du Pont.\n"
+        "He tells you he's from your town and is a secret admirer of yours and that you\n"
+        "can both escape right now through a passageway in his cell.\n"
+        "\n"
+        "1. You've just met this man, don't trust him and go back to Annette.\n"
+        "2. He played melodies from your hometown, trust him and escape.\n\n"
+    );
+
+    int choice = get_choice(2);
+    if (choice == 1) distrust_du();
+    else trust_du();
+}
+
+void attack() {
+    clear_screen();
+    printf(
+        "What were you thinking?!?\n"
+        "You pick up a big rock and try and sneak behind the guard, but your blouse gets\n"
+        "caught on a sharp rock and he hears the tear.\n"
+        "The guard turns around and quickly overpowers you, throwing into a different\n"
+        "cell than the French prisoner.\n"
+        "\n"
+        "Now you can only pray that Montoni will come and release you...\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
+    );
+
+    game_over();
 }
 
 // lvl 1 depth
@@ -209,21 +370,48 @@ void send_ludo() {
     );
 
     int choice = get_choice(2);
-    if(choice == 1) {
-        no_wait();
-    } else {
-        wait_door();
-    }
+    if(choice == 1) no_wait();
+    else wait_door();
 }
 
 void go_alone() {
-
+    clear_screen();
+    printf(
+        "Cellar\n"
+        "You dismiss Ludovico and leave Annette behind in your room to find the prisoner\n"
+        "yourself.\n"
+        "Sneaking through Udolpho, you eventually reach the underground cellar, where\n"
+        "the prisoner would be help.\n"
+        "There is one big, mean looking guard standing buy a cell on watch, he has a\n"
+        "very simple, crude countenance.\n"
+        "\n"
+        "1. Try and distract the guard.\n"
+        "2. You have the element of surprise, attack the guard!\n\n"
+    );
+    
+    int choice = get_choice(2);
+    if(choice == 1) distract();
+    else attack();
 }
 
 void no_meet() {
+    clear_screen();
+    printf(
+        "Have you really given up all hope of possibly seeing Valancourt again?!?\n"
+        "Filled with anguish over your desparate situation and having totally lost hope\n"
+        "in ever again seeing your beloved, you reject any meeting with the prisoner.\n"
+        "You lay back in your bed and fall into a deep depression with no desire to ever\n"
+        "leave this Castle, much less your own room.\n"
+        "\n"
+        "This is what happens when you lose all hope.\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n"
+    );
 
+    game_over();
 }
 
+// lvl 0 depth
 void start() {
     clear_screen();
     printf(
@@ -242,11 +430,7 @@ void start() {
     );
 
     int choice = get_choice(3);
-    if(choice == 1) {
-        send_ludo();
-    } else if(choice == 2) {
-        go_alone();
-    } else {
-        no_meet();
-    }
+    if(choice == 1) send_ludo();
+    else if(choice == 2) go_alone();
+    else no_meet();
 }
