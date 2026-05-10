@@ -21,8 +21,40 @@ void trust0() {
     game_over();
 }
 
+void trust1() {
+    clear_screen();
+    printf(
+        "Outer Court\n"
+        "Ludovico sends the guard off to join the tumult with his fellow bandits.\n"
+        "With the guard distracted, Ludovico opens the gate, mounts a horse, and lifts\n"
+        "you and Annette on horseback with him.\n"
+        "You set off as fast as the broken roads would permit on Ludovico's horse, away\n"
+        "from the Castle of Udolpho.\n"
+        "\n"
+        "Let's just hope you won't need any money, because the one horse Ludovico took\n"
+        "has no hidden bags of bandit booty hiding beneath the saddle...\n"
+        "\n"
+        "Congratulations! You have successfully escaped from the Castle of Udolpho!\n\n"
+    );
+
+    game_over();
+}
+
 void distrust() {
     clear_screen();
+    printf(
+        "Outer Court\n"
+        "You suspect Ludovico will tell the guard where you and the others are hiding.\n"
+        "As soon as he walks away, you rush out of the opening towards the closed gate\n"
+        "and begin desparately trying to force your way through.\n"
+        "\n"
+        "Annette doesn't even have anything to say as you are all seized by Montoni's\n"
+        "men and imprisoned beneath the castle for a long, long time.\n"
+        "\n"
+        "You have failed to escape from the Caste of Udolpho.\n\n"
+    );
+
+    game_over();
 }
 
 // lvl 4 depth
@@ -50,15 +82,66 @@ void follow() {
 
 void get_docs() {
     clear_screen();
+    printf(
+        "Madame Cheron's Room"
+        "You bolt away from Du Pont and Ludovico and barrel through the corridors of\n"
+        "Udolpho towards your aunt's room.\n"
+        "You go in the closet and find what you're looking for, the written property\n"
+        "deeds to your aunt's estate.\n"
+        "If Montoni gets ahold of these, you would have no legal ground to reclaim your\n"
+        "aunt's former properties that he forced you to sign over.\n"
+        "Unfortunately, in your eagerness to retrieve these documents, you didn't\n"
+        "notice Montoni leave his party and follow you.\n"
+        "\n"
+        "Now you've lead Montoni straight to the very documents he needed! Oops...\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n"
+    );
+
+    game_over();
 }
 
 // lvl 3 depth
 void to_stairs() {
     clear_screen();
+    printf(
+        "Hidden Staircase\n"
+        "You abandon Du Pont in his battle with Verezzi, you have more important things\n"
+        "to do like trying to stay alive and avoid dangerous men!\n"
+        "Ludovico guides you to Annette, and then to an opening into the outer court of\n"
+        "the castle.\n"
+        "A group of bandits has recently arrived from pillaging and Montoni's men are\n"
+        "in a tumult.\n"
+        "Ludovico tells you his plan to distract the lone guard so you can all escape.\n"
+        "\n"
+        "1. Ludovico has brought you this far, trust him and his plan of escape.\n"
+        "2. He could still be working for Montoni, don't trust Ludovico.\n\n"
+    );
+
+    int choice = get_choice(2);
+    if(choice == 1) {
+        trust1();
+    } else {
+        distrust();
+    }
 }
 
 void down_cor() {
     clear_screen();
+    printf(
+        "You abandon Du Pont to his battle with Verezzi and barrel down the corridors\n"
+        "of Udolpho, terrified of encountering any other armed men.\n"
+        "In your frensy and exhaustion, you bump into a tapesty and fall straight\n"
+        "through it into a hidden passageway.\n"
+        "The passageway entrance closes behind you and seals you in complete darkness.\n"
+        "\n"
+        "Unable to navigate the confusing hidden passageways of Udolpho in the dark,\n"
+        "you prepare to live out the rest of your short life in the walls of Udolpho.\n"
+        "\n"
+        "You have failed to escape from the Castle of Udolpho.\n"
+    );
+
+    game_over();
 }
 
 void stop_fight() {
