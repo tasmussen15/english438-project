@@ -59,7 +59,7 @@ __|          ;     |MM"MM"""""---..._______...--""MM"MM]                   |
 
 ```
 
-A text-based Choose Your Own Adventure game by Thomas Asmussen
+A Choose Your Own Adventure computer game by Thomas Asmussen
 
 ## Story
 
@@ -73,7 +73,7 @@ your aunt, ultimately leading to her unfortunate death.
 
 With your aunt deceased, it's only a matter of time before Montoni decides to
 get rid of you, too. That is why tonight, you and your faithful servant,
-Annette, will brave the wrath of Montoni and the schemes of your kidnapping
-suitor Count Morano to attempt to make your escape from the Castle of Udolpho.
+Annette, will attempt to make your escape from the Castle of Udolpho, or suffer
+the wrath of Montoni!
 
 Based on the novel *The Mysteries of Udolpho* by Ann Radcliffe.

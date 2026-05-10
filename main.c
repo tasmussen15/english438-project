@@ -1,31 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ascii.h"
-
-void wait_for_enter(int start) {
-    if(start) {
-        printf("Press Enter to Start Game\n");
-    } else {
-        printf("Press Enter to continue...\n");
-    }
-
-    while (getchar() != '\n');
-}
-
-void clear_screen() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
-}
+#include "scenes.h"
+#include "utils.h"
 
 int main() {
+    clear_screen();
     printf("%s", CASTLE);
     printf("%s", TITLE);
-    printf("A text-based Choose Your Own Adventure game by Thomas Asmussen\n\n");
+    printf("A Choose Your Own Adventure computer game by Thomas Asmussen\n\n");
 
     wait_for_enter(1);
+    clear_screen();
+
+    printf("Controls:\n\n");
+    printf(
+        "The game will describe your current situation and give you a list of choices\n"
+        "for how to continue. You must enter the number matching your choice and hit\n"
+        "Enter to confirm.\n\n"
+    );
+
+    wait_for_enter(0);
     clear_screen();
 
     printf("The Story So Far:\n\n");
@@ -38,29 +33,16 @@ int main() {
         "he reveals his true character as a villainous leader of bandits and imprisons\n"
         "your aunt, ultimately leading to her unfortunate death.\n\n"
     );
-
     printf(
         "With your aunt deceased, it's only a matter of time before Montoni decides to\n"
         "get rid of you, too. That is why tonight, you and your faithful servant,\n"
-        "Annette, will brave the wrath of Montoni and the schemes of your kidnapping\n"
-        "suitor Count Morano to attempt to make your escape from the Castle of Udolpho.\n\n"
+        "Annette, will attempt to make your escape from the Castle of Udolpho, or suffer\n"
+        "the wrath of Montoni!\n\n"
     );
 
-    wait_for_enter(0);
-    clear_screen();
-
-    char buffer[256];
-    printf("Enter a number:");
-    fgets(buffer, sizeof(buffer), stdin);
-    int input = buffer[0] - '0';
-
-    if(input == 1) {
-        printf("You entered 1!\n");
-    } else {
-        printf("Not 1\n");
-    }
-
-    wait_for_enter(0);
+    wait_for_enter(2);
+    
+    start();
 
     return 0;
 }
