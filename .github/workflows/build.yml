@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: gcc *.c -o my_game
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: my_game-${{ matrix.os }}
+          path: |
+            my_game
+            my_game.exe
