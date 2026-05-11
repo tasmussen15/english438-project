@@ -16,12 +16,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build
-        run: gcc *.c -o my_game
+        run: gcc *.c -o escape-from-castle-udolpho
 
       - name: Upload executable
         uses: actions/upload-artifact@v4
         with:
-          name: my_game-${{ matrix.os }}
+          name: escape-from-castle-udolpho-${{ matrix.os }}
           path: |
-            my_game
-            my_game.exe
+            escape-from-castle-udolpho
+            escape-from-castle-udolpho.exe
