@@ -42,7 +42,7 @@ int get_choice(int max) {
     }
 }
 
-int game_over() {
+void game_over() {
     printf("1. Play again\n");
     printf("2. Quit\n");
 
