@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include "scenes.h"
+#include "ascii.h"
 #include "utils.h"
 
 // lvl depth 5
 void trust0() {
     clear_screen();
+    printf("%s\n", COURT);
     printf(
         "Outer Court\n"
+        "\n"
         "Ludovico sends the guard off to join the tumult with his fellow bandits.\n"
-        "With the guard distracted, Ludovico opens the gate, seizes two horses, and\n"
-        "calls you and the others to follow him.\n"
+        "With the guard distracted, Ludovico opens the gate and seizes two horses.\n"
         "Ludovico and Du Pont each mount a horse and place Annette and yourself on\n"
         "horseback with them.\n"
         "With Ludovico leading the way, you set off as fast as the broken roads would\n"
@@ -23,8 +25,10 @@ void trust0() {
 
 void trust1() {
     clear_screen();
+    printf("%s\n", COURT);
     printf(
         "Outer Court\n"
+        "\n"
         "Ludovico sends the guard off to join the tumult with his fellow bandits.\n"
         "With the guard distracted, Ludovico opens the gate, mounts a horse, and lifts\n"
         "you and Annette on horseback with him.\n"
@@ -42,8 +46,10 @@ void trust1() {
 
 void distrust() {
     clear_screen();
+    printf("%s\n", COURT);
     printf(
         "Outer Court\n"
+        "\n"
         "You suspect Ludovico will tell the guard where you and the others are hiding.\n"
         "As soon as he walks away, you rush out of the opening towards the closed gate\n"
         "and begin desparately trying to force your way through.\n"
@@ -60,8 +66,10 @@ void distrust() {
 // lvl 4 depth
 void follow() {
     clear_screen();
+    printf("%s\n", HIDDEN_PASSAGE);
     printf(
         "Hidden Staircase\n"
+        "\n"
         "Ludovico guides you and Du Pont to Annette, and then to an opening into the\n"
         "outer court of the castle.\n"
         "A group of bandits has recently arrived from pillaging and Montoni's men are\n"
@@ -79,8 +87,10 @@ void follow() {
 
 void get_docs() {
     clear_screen();
+    printf("%s\n", AUNT_BEDROOM);
     printf(
-        "Madame Cheron's Room"
+        "Madame Cheron's Room\n"
+        "\n"
         "You bolt away from Du Pont and Ludovico and barrel through the corridors of\n"
         "Udolpho towards your aunt's room.\n"
         "You go in the closet and find what you're looking for, the written property\n"
@@ -117,7 +127,10 @@ void to_top() {
 
 void clothes() {
     clear_screen();
+    printf("%s\n", FOREST);
     printf(
+        "Forest\n"
+        "\n"
         "You go to the pile of clothes and tie them together into a long rope.\n"
         "You tie one end to an old sconce on the wall and throw the rest out the window.\n"
         "Gripping tightly onto the rope, you slowly rappel down the side of the turret\n"
@@ -134,8 +147,10 @@ void clothes() {
 // lvl 3 depth
 void to_stairs() {
     clear_screen();
+    printf("%s\n", HIDDEN_PASSAGE);
     printf(
         "Hidden Staircase\n"
+        "\n"
         "You abandon Du Pont in his battle with Verezzi, you have more important things\n"
         "to do like trying to stay alive and avoid dangerous men!\n"
         "Ludovico guides you to Annette, and then to an opening into the outer court of\n"
@@ -192,6 +207,7 @@ void to_room() {
     clear_screen();
     printf(
         "Your Room\n"
+        "\n"
         "You scramble back into your room and lock the door behind you.\n"
         "You hear the footsteps and shouts of Montoni's men as they try and enter\n"
         "your room, but the door holds and they can't get in.\n"
@@ -227,8 +243,10 @@ void down_cor1() {
 
 void up_stairs() {
     clear_screen();
+    printf("%s\n", TURRET);
     printf(
         "North Turret\n"
+        "\n"
         "Before Montoni's men can catch you, you dash up the stairs as high as you can\n"
         "go until you find yourself in the North Turret of the castle.\n"
         "There is a pile of old clothes on the landing by an open window and the\n"
@@ -246,8 +264,10 @@ void up_stairs() {
 
 void distrust_du() {
     clear_screen();
+    printf("%s\n", CORRIDOR);
     printf(
         "Connecting Corridor"
+        "\n"
         "You decide you can't be trusting strange men, even if he has a good countenance.\n"
         "You try and sneak back to your room, but get caught sneaking around by some of\n"
         "Montoni's guests.\n"
@@ -262,7 +282,10 @@ void distrust_du() {
 
 void trust_du() {
     clear_screen();
+    printf("%s\n", FOREST);
     printf(
+        "Forest\n"
+        "\n"
         "You decidde to trust the stranger Du Pont and let yourself into his cell.\n"
         "He reveals a secret passageway in his cell and together you venture into it.\n"
         "After much navigating through many narrow, dark passages, you suddenly find\n"
@@ -280,8 +303,10 @@ void trust_du() {
 // lvl 2 depth
 void no_wait() {
     clear_screen();
+    printf("%s\n", CORRIDOR);
     printf(
         "Connecting Corridor\n"
+        "\n"
         "You slam open the door and rush out into the corridor, expecting to see\n"
         "Valancourt, but the corridor is empty.\n"
         "The sound you made alerts Montoni's party, and you can hear the shouts of men\n"
@@ -300,8 +325,10 @@ void no_wait() {
 
 void wait_door() {
     clear_screen();
+    printf("%s\n", CORRIDOR);
     printf(
         "Connecting Corridor\n"
+        "\n"
         "You wait at the door, but can't contain your excitement and finally rush out\n"
         "the door, but on encountering the arms of a stranger, you faint from surprise.\n"
         "When you come to, Ludovico is gone, and you are acquainted with the prisoner,\n"
@@ -376,8 +403,10 @@ void send_ludo() {
 
 void go_alone() {
     clear_screen();
+    printf("%s\n", CELLAR);
     printf(
         "Cellar\n"
+        "\n"
         "You dismiss Ludovico and leave Annette behind in your room to find the prisoner\n"
         "yourself.\n"
         "Sneaking through Udolpho, you eventually reach the underground cellar, where\n"
@@ -405,7 +434,7 @@ void no_meet() {
         "\n"
         "This is what happens when you lose all hope.\n"
         "\n"
-        "You have failed to escape from the Castle of Udolpho.\n"
+        "You have failed to escape from the Castle of Udolpho.\n\n"
     );
 
     game_over();
@@ -414,8 +443,10 @@ void no_meet() {
 // lvl 0 depth
 void start() {
     clear_screen();
+    printf("%s\n", EMILY_BEDROOM);
     printf(
-        "Emily's Room\n"
+        "Your Room\n"
+        "\n"
         "You, your servant Annette, and Montoni's servant, Ludovico, who has affection\n"
         "for Annette, are in your room.\n"
         "There is a familiar French tune playing from a lute outside the window.\n"
